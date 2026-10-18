@@ -1,0 +1,36 @@
+/* SEO-Bausteine: Einzugsgebiet, Orts-Seiten, FAQ */
+.catchment{border-top:1px solid var(--line)}
+.catchment h2{font-size:clamp(28px,3.4vw,46px);letter-spacing:-1.6px;margin-bottom:18px}
+.catchment>p{max-width:640px;color:var(--stone);margin:0 0 26px}
+.catchment-regions{margin:0;max-width:980px}
+.catchment-regions>div{display:grid;grid-template-columns:200px minmax(0,1fr);gap:8px 28px;padding:14px 0;border-top:1px solid var(--line)}
+.catchment-regions>div:last-child{border-bottom:1px solid var(--line)}
+.catchment-regions dt{font-size:12px;letter-spacing:1.5px;text-transform:uppercase;color:var(--stone);padding-top:3px}
+.catchment-regions dd{margin:0;font-size:15px;line-height:1.7;color:var(--ink)}
+@media(max-width:700px){.catchment-regions>div{grid-template-columns:1fr;gap:4px}}
+/* FAQ innerhalb von Artikeln */
+.faq-inline .tag{margin-bottom:14px}
+.faq-inline h2{font-size:clamp(26px,3.2vw,42px);letter-spacing:-1.4px;margin-bottom:22px}
+.faq-inline details{border-bottom:1px solid var(--line);padding:6px 0}
+.faq-inline summary{cursor:pointer;min-height:52px;display:flex;align-items:center;justify-content:space-between;gap:20px;font-size:17px;list-style:none;padding:10px 0}
+.faq-inline summary::-webkit-details-marker{display:none}
+.faq-inline summary::after{content:"+";font-size:24px;line-height:1;color:var(--stone);transition:transform .25s ease;flex:none}
+.faq-inline details[open] summary::after{transform:rotate(45deg)}
+.faq-inline summary:hover{color:var(--stone)}
+.faq-inline details>p{margin:0 0 18px;max-width:720px;font-size:16px;color:var(--ink)}
+.faq-inline details[open]>p{animation:rvUp .4s ease both}
+.faq-inline .faq-list2 details:first-child{border-top:1px solid var(--line);padding-top:6px}
+/* Orts-Seiten */
+.place-page .place-services>div{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.place-page .place-services a{display:flex;flex-direction:column;gap:6px;padding:20px 22px;border:1px solid var(--line);background:var(--soft);text-decoration:none;color:var(--ink);position:relative;transition:background .2s,border-color .2s}
+.place-page .place-services a:hover{background:rgba(110,88,62,.1);border-color:rgba(110,88,62,.4)}
+.place-page .place-services strong{font-weight:500;font-size:18px}
+.place-page .place-services span{font-size:14px;color:var(--stone);padding-right:28px}
+.place-page .place-services svg{position:absolute;right:20px;top:22px}
+.place-page ul:not(.place-list){padding-left:20px}
+@media(max-width:860px){.catchment{grid-template-columns:1fr;gap:28px}}
+@media(max-width:700px){.place-page .place-services>div{grid-template-columns:1fr}.catchment-list summary{font-size:17px}}
+
+
+.legal-note{margin:34px 0 0;padding-top:16px;border-top:1px solid var(--line);font-size:13px;line-height:1.55;color:var(--stone);max-width:720px}
+
