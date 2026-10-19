@@ -32,6 +32,11 @@
   function init(){
     var c=get();
     if(c==='granted')load();else if(c!=='denied')show();
+    var sent=0;
+    document.addEventListener('click',function(e){
+      var l=e.target.closest&&e.target.closest('a[href^="mailto:"],a[href^="tel:"]');
+      if(l&&window.__goreTag&&!sent){sent=1;try{gtag('event','conversion',{'send_to':'AW-18520200851/F3tSCNC74KIdEJOtj_9E'})}catch(x){}}
+    });
     document.addEventListener('click',function(e){
       var t=e.target.closest&&e.target.closest('[data-consent-reset]');
       if(t){e.preventDefault();try{localStorage.removeItem(KEY)}catch(x){}show()}
