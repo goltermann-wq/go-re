@@ -35,3 +35,6 @@
 @media print{.np{display:none}}
 
 .author{display:flex;align-items:center;gap:1.1rem;margin:2.5rem 0 1rem;padding:1.25rem 0;border-top:1px solid rgba(128,128,128,.28);border-bottom:1px solid rgba(128,128,128,.28)}.author img{width:72px;height:72px;border-radius:50%;object-fit:cover;flex:none}.author-txt{display:flex;flex-direction:column;gap:.15rem;line-height:1.35}.author-label{font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;opacity:.6}.author-name{font-size:1.05rem;font-weight:600}.author-role{font-size:.92rem;opacity:.75}
+
+/* Fix: unsichtbarer Rahmen blockierte Klicks (z. B. Footer-Links am Handy) */
+.np{pointer-events:none}.np .np-chip,.np:not(.is-closed) .np-panel{pointer-events:auto}
